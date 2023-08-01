@@ -31,7 +31,7 @@ function printElements(apiResponse, searchTerm) {
       const gifUrl = gif.images.original.url;
       gifHtml += `
         <div>
-          <p>GIF related to "${searchTerm}":</p>
+          <br>
           <img src="${gifUrl}" alt="${searchTerm} GIF">
         </div>
       `;
@@ -43,14 +43,10 @@ function printElements(apiResponse, searchTerm) {
 }
 
 
-// function printError(request, apiResponse, city) {
-//   document.querySelector('#showResponse').innerText = `There was an error accessing the weather data for ${city}: ${request.status} ${request.statusText}: ${apiResponse.message}`;
-// }
 
 function handleFormSubmission(event) {
   event.preventDefault();
   const searchTerm = document.querySelector('#searchTerm').value;
-  //document.querySelector('#searchTerm').value = null;
   wordSearch(searchTerm);
 }
 
